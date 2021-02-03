@@ -1,0 +1,219 @@
+@import "~antd/dist/antd.css";
+
+.nav {
+  display: flex;
+  list-style: none;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.nav li {
+  margin-left: 10px;
+  font-size: 26px;
+}
+
+.nav img {
+  width: 65px;
+  margin-right: 50px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.selectPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  font-size: 18px;
+}
+
+#page {
+  text-align: right;
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+.login {
+  position: absolute;
+  right: 2rem;
+  top: 27px;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  grid-gap: 2rem;
+  font-size: 1.6rem;
+  padding: 35px;
+}
+
+.movie {
+  background-color: #fff;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.movie__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  height: 3.8rem;
+  font-size: 20px;
+  color: black;
+}
+
+.movie__name:hover {
+  color: #30bee6;
+}
+
+.movie__data {
+  display: flex;
+  justify-content: space-between;
+  height: 1.8rem;
+}
+
+.movie__data .avg {
+  margin-left: 0.5rem;
+}
+
+.movie__row {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.movie__img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.data {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+#image {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding-top: 10px;
+  width: 100%;
+  height: 120%;
+  overflow: auto;
+}
+
+.poster {
+  max-height: 600px;
+}
+
+#text {
+  margin-left: 25px;
+  padding-top: 3px;
+  overflow: auto;
+  width: 90%;
+  height: 120%;
+}
+
+.genre {
+  display: flex;
+  list-style: none;
+  list-style-type: none;
+}
+
+.genre p {
+  background-color: #01b4e4;
+  color: white;
+  margin-right: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 2rem;
+  padding: 8px;
+  opacity: 60%;
+  border-radius: 18px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating a {
+  margin-left: 5px;
+  color: black;
+  cursor: text;
+}
+
+.selectCategory {
+  position: absolute;
+  right: 2rem;
+  top: 119px;
+}
+
+#category {
+  position: absolute;
+  right: 6.4rem;
+  top: 96px;
+  font-size: 13px;
+  color: gray;
+}
+
+.productionCompanies {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  margin: auto;
+  /* 弹出页面高度,如果不固定高度,高度会以实际内容扩展 */
+  height: auto;
+  max-height: 100px;
+  width: auto;
+  overflow: auto;
+}
+
+.company {
+  padding: 10px;
+  min-width: 50px;
+}
+
+#overview {
+  margin: auto;
+  height: auto;
+  width: 90%;
+  margin-right: 10%;
+  max-height: 100px;
+  overflow: auto;
+}
+
+.spin {
+  text-align: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 30px 50px;
+  margin: 20px 0;
+}
+
+.form {
+  width: 300px;
+  border-radius: 4px;
+  padding: 30px 0px;
+  margin: 20px 0;
+}
+
+.log {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+}
