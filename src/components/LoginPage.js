@@ -36,10 +36,6 @@ const LoginPage = () => {
   const [loadings, setLoadings] = React.useState(false);
   const history = useHistory();
 
-  useEffect(() => {
-    console.log(state);
-  }, [state]);
-
   const res = useFetch(fetchToken);
   if (!res.response) {
     return (
@@ -81,7 +77,6 @@ const LoginPage = () => {
   };
 
   const requestFavoriteMovie = (id) => {
-    console.log(favLink + api + id + suffix);
     fetch(favLink + api + id + suffix)
       .then((res) => res.json())
       .catch((error) => console.error("Error:", error))

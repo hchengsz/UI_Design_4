@@ -38,7 +38,7 @@ export default function RatedPage() {
           dispatch({ type: "SET_MOVIES", payload: response });
         }
       });
-  }, []);
+  }, [dispatch, state.likedMovie, state.session_id]);
 
   if (state.session_id === null) {
     return (

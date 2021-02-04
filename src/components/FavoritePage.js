@@ -32,7 +32,7 @@ export default function FavoritePage() {
           dispatch({ type: "SET_MOVIES", payload: response });
         }
       });
-  }, []);
+  }, [dispatch, state.session_id]);
 
   if (state.session_id === null) {
     return (
@@ -68,9 +68,6 @@ export default function FavoritePage() {
     let temp = state.movies.slice();
 
     temp = temp.filter((element) => element.id !== id);
-
-    console.log(id);
-    console.log(temp);
 
     const body = {
       media_type: "movie",

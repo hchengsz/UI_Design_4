@@ -92,11 +92,10 @@ function NavBar() {
     };
 
     const requestFavoriteMovie = async (id) => {
-      console.log(favLink + api + id + suffix);
       if (id === undefined) {
         return;
       } else {
-        console.log("success", id);
+        console.log("success");
       }
       fetch(favLink + api + id + suffix)
         .then((res) => res.json())
@@ -120,10 +119,6 @@ function NavBar() {
           localStorage.getItem("username"),
           localStorage.getItem("password")
         );
-      }
-      if (state.session_id !== null) {
-        console.log("session from state", state.session_id);
-        console.log(state);
       }
       if (state.session_id === null) {
         setLogin(

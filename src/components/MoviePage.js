@@ -82,7 +82,7 @@ function MoviePage() {
           }
         }
       });
-  }, [loadings]);
+  }, [loadings, id, dispatch, state.session_id]);
 
   if (!res.response) {
     return (
@@ -158,7 +158,7 @@ function MoviePage() {
         <h3>Rating:</h3>
         <div className="rating">
           <StarFilled style={{ color: "gold" }} />
-          <a>{movie.vote_average}</a>
+          <div style={{ marginLeft: 10 }}> {movie.vote_average}</div>
         </div>
         <h3>Your Rating:</h3>
         <p>{state.yourRate}</p>
