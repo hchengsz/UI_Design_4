@@ -1,4 +1,4 @@
-import { Select, Button, Space, Spin, message } from "antd";
+import { Select, Button, Spin, message } from "antd";
 import { useParams } from "react-router-dom";
 import React, { useContext } from "react";
 import { StarFilled } from "@ant-design/icons";
@@ -59,7 +59,6 @@ function MoviePage() {
   const { id } = useParams();
   const res = useFetch(baseUrl + id + apiKey);
   const [state, dispatch] = useContext(Context);
-  const [login, setLogin] = React.useState(null);
   const [loadings, setLoadings] = React.useState(false);
   let ratingValue = 1;
 
@@ -93,13 +92,8 @@ function MoviePage() {
     );
   }
 
-  const genre = [];
   const movie = res.response;
   const productionCompanies = movie.production_companies;
-  console.log(productionCompanies);
-  movie.genres.forEach((element) => {
-    genre.push(element.name);
-  });
 
   function handleChange(value) {
     ratingValue = value;
@@ -141,7 +135,6 @@ function MoviePage() {
 
   return (
     <div className="data">
-      {login}
       <div id="image">
         <img
           className="poster"
@@ -158,8 +151,8 @@ function MoviePage() {
         <p id="overview">{movie.overview}</p>
         <h3>Genres:</h3>
         <div className="genre">
-          {genre.map((v) => (
-            <div key={v}>{v}</div>
+          {movie.genres.map((v) => (
+            <div key={v.name}>{v.name}</div>
           ))}
         </div>
         <h3>Rating:</h3>
@@ -189,6 +182,7 @@ function MoviePage() {
                   <img
                     key={v.name}
                     style={{ height: 40 }}
+                    alt={v.name}
                     src={"https://www.themoviedb.org/t/p/w1280/" + v.logo_path}
                   ></img>
                   <p key={v.id} style={{ fontSize: 16 }}>
