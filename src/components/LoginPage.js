@@ -1,5 +1,5 @@
 import { Form, Input, Button, Spin, message } from "antd";
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import useFetch from "./useFetch";
 import { Context } from "../Store";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
@@ -72,6 +72,7 @@ const LoginPage = () => {
       .then((response) => {
         dispatch({ type: "SET_ID", payload: response.session_id });
         message.success("Success logged in");
+        console.log(state.username);
         requestFavoriteMovie(response.session_id);
       });
   };
