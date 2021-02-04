@@ -159,7 +159,7 @@ function MoviePage() {
         <h3>Genres:</h3>
         <div className="genre">
           {genre.map((v) => (
-            <p key={v}>{v}</p>
+            <div key={v}>{v}</div>
           ))}
         </div>
         <h3>Rating:</h3>

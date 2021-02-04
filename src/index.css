@@ -131,7 +131,7 @@
   list-style-type: none;
 }
 
-.genre p {
+.genre div {
   background-color: #01b4e4;
   color: white;
   margin-right: 10px;
