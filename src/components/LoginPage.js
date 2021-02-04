@@ -3,7 +3,7 @@ import React, { useContext, useEffect } from "react";
 import useFetch from "./useFetch";
 import { Context } from "../Store";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
-import { Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import logo from "../login.svg";
 
 const layout = {
@@ -134,7 +134,7 @@ const LoginPage = () => {
             marginBottom: 20,
           }}
         >
-          <img src={logo} style={{ height: 28, marginRight: 40 }} />
+          <img src={logo} alt="logo" style={{ height: 28, marginRight: 40 }} />
           <div
             style={{ display: "flex", justifyContent: "center", fontSize: 29 }}
           >

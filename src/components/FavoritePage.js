@@ -14,7 +14,6 @@ const postFav = "https://api.themoviedb.org/3/account/{account_id}/favorite";
 
 export default function FavoritePage() {
   const [state, dispatch] = useContext(Context);
-  const [movies, setMovies] = React.useState([]);
 
   React.useEffect(() => {
     if (state.session_id === null) {
