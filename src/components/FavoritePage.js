@@ -14,6 +14,7 @@ const postFav = "https://api.themoviedb.org/3/account/{account_id}/favorite";
 
 export default function FavoritePage() {
   const [state, dispatch] = useContext(Context);
+  const [movies, setMovies] = React.useState([]);
 
   React.useEffect(() => {
     if (state.session_id === null) {
@@ -132,10 +133,10 @@ export default function FavoritePage() {
               {movie.title}
             </Link>
             <div className="movie__data">
-              <p className="movie__row">
+              <div className="movie__row">
                 <StarFilled style={{ color: "gold" }} />
                 <div className="avg">{movie.vote_average}</div>
-              </p>
+              </div>
               <p className="movie__row">{heart}</p>
             </div>
           </div>

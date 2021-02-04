@@ -47,7 +47,7 @@ export default function RatedPage() {
         title="Login Required"
         subTitle="Sorry, you need to login first to access this page."
         extra={
-          <Link to="/">
+          <Link to="/login">
             <Button type="primary">Go to Login</Button>
           </Link>
         }
@@ -148,12 +148,12 @@ export default function RatedPage() {
               {movie.title}
             </Link>
             <div className="movie__data">
-              <p className="movie__row">
+              <div className="movie__row">
                 <StarFilled style={{ color: "gold" }} />
                 <div className="avg">
                   {movie.vote_average} / {movie.rating}
                 </div>
-              </p>
+              </div>
               <p className="movie__row">{heart}</p>
             </div>
           </div>

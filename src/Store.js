@@ -7,6 +7,7 @@ const initialState = {
   likedMovie: new Map(),
   movies: [],
   yourRate: "Not yet",
+  selectKey: ["Home"],
   error: null,
 };
 

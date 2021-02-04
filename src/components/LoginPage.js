@@ -8,7 +8,7 @@ import logo from "../login.svg";
 
 const layout = {
   labelCol: { span: 1 },
-  wrapperCol: { span: 0 },
+  wrapperCol: { span: 8 },
 };
 const tailLayout = {
   wrapperCol: { offset: 0, span: 0 },

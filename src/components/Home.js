@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { StarFilled, HeartOutlined, HeartFilled } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import { Select, Button, Modal, Spin, Space } from "antd";
+import { Select, Button, Modal, Spin } from "antd";
 import { Context } from "../Store";
 
 const urlMovie = "https://api.themoviedb.org/3/movie/";
@@ -38,25 +38,27 @@ export default function Home() {
   const [maxPage, setMaxPage] = React.useState(500);
   const [movies, setMovies] = React.useState([]);
 
-  useEffect(async () => {
-    fetch(urlMovie + types + apiKey + page)
-      .then((res) => res.json())
-      .catch((error) => console.error("Error:", error))
-      .then((response) => {
-        setMaxPage(response.total_pages);
-        response = response.results.map((item) => {
-          if (
-            state.likedMovie !== undefined &&
-            state.likedMovie.get(item.id) !== undefined
-          ) {
-            return Object.assign({}, item, { favorite: true });
-          } else {
-            return Object.assign({}, item, { favorite: false });
-          }
+  useEffect(() => {
+    async function fetchData() {
+      fetch(urlMovie + types + apiKey + page)
+        .then((res) => res.json())
+        .catch((error) => console.error("Error:", error))
+        .then((response) => {
+          setMaxPage(response.total_pages);
+          response = response.results.map((item) => {
+            if (
+              state.likedMovie !== undefined &&
+              state.likedMovie.get(item.id) !== undefined
+            ) {
+              return Object.assign({}, item, { favorite: true });
+            } else {
+              return Object.assign({}, item, { favorite: false });
+            }
+          });
+          setMovies(response.slice());
         });
-        // dispatch({ type: "SET_MOVIES", payload: response });
-        setMovies(response.slice());
-      });
+    }
+    fetchData();
   }, [types, page, state]);
 
   if (movies.length === 0) {

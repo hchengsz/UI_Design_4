@@ -20,6 +20,11 @@ const Reducer = (state, action) => {
         ...state,
         error: action.payload,
       };
+    case "SET_SELECTABLE":
+      return {
+        ...state,
+        selectKey: action.payload,
+      };
     case "SET_MOVIES":
       return {
         ...state,
