@@ -128,7 +128,6 @@
 .genre {
   display: flex;
   justify-content: flex-start;
-  border: 1px solid red;
 }
 
 .genre div {
@@ -142,9 +141,6 @@
   height: 2rem;
   border-radius: 18px;
   padding: 8px;
-  /* padding: 8px;
-  opacity: 60%;
-  border: 1px solid red; */
 }
 
 .rating {
@@ -185,10 +181,8 @@
 
 .company {
   padding: 10px;
-  border: 1px solid red;
 }
 .company img {
-  border: 1px solid red;
   max-width: 100%;
 }
 
