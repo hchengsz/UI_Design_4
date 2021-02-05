@@ -128,15 +128,15 @@
 .genre {
   display: flex;
   list-style: none;
-  list-style-type: none;
+  justify-content: flex-start;
+  border: 1px solid red;
 }
 
-.genre p {
+.genre div {
   background-color: #01b4e4;
-  color: white;
+  color: rgb(255, 255, 255);
   margin-right: 10px;
   display: flex;
-  text-align: center;
   justify-content: center;
   align-items: center;
   width: auto;
@@ -144,6 +144,7 @@
   padding: 8px;
   opacity: 60%;
   border-radius: 18px;
+  border: 1px solid red;
 }
 
 .rating {
