@@ -94,6 +94,7 @@ function MoviePage() {
 
   const movie = res.response;
   const productionCompanies = movie.production_companies;
+  console.log(movie.genres);
 
   function handleChange(value) {
     ratingValue = value;
