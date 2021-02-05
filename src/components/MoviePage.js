@@ -151,11 +151,11 @@ function MoviePage() {
         <h3>Overview:</h3>
         <p id="overview">{movie.overview}</p>
         <h3>Genres:</h3>
-        <ul className="genre">
+        <div className="genre">
           {movie.genres.map((v) => (
-            <li key={v.name}>{v.name}</li>
+            <p key={v.name}>{v.name}</p>
           ))}
-        </ul>
+        </div>
         <h3>Rating:</h3>
         <div className="rating">
           <StarFilled style={{ color: "gold" }} />
@@ -179,7 +179,7 @@ function MoviePage() {
           {productionCompanies.map((v) => {
             if (v.logo_path === null) {
               return (
-                <div className="company">
+                <div className="company" key={v.name}>
                   <p style={{ color: "red" }}>Image Loading Error</p>
                   <p key={v.id} style={{ fontSize: 16 }}>
                     {v.name}
@@ -188,9 +188,8 @@ function MoviePage() {
               );
             }
             return (
-              <div className="company">
+              <div className="company" key={v.name}>
                 <img
-                  key={v.name}
                   style={{ height: 40 }}
                   alt={v.name}
                   src={"https://www.themoviedb.org/t/p/w1280/" + v.logo_path}
