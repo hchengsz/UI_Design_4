@@ -141,9 +141,9 @@
   width: auto;
   height: 2rem;
   border-radius: 18px;
+  padding: 8px;
   /* padding: 8px;
   opacity: 60%;
-  border-radius: 18px;
   border: 1px solid red; */
 }
 
@@ -189,7 +189,7 @@
 }
 .company img {
   border: 1px solid red;
-  object-fit: cover;
+  max-width: 100%;
 }
 
 #overview {
