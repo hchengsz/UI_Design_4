@@ -127,12 +127,11 @@
 
 .genre {
   display: flex;
-  list-style: none;
   justify-content: flex-start;
   border: 1px solid red;
 }
 
-.genre div {
+/* .genre div {
   background-color: #01b4e4;
   color: rgb(255, 255, 255);
   margin-right: 10px;
@@ -145,7 +144,7 @@
   opacity: 60%;
   border-radius: 18px;
   border: 1px solid red;
-}
+} */
 
 .rating {
   display: flex;
