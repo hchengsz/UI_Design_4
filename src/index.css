@@ -1,29 +1,54 @@
 @import "~antd/dist/antd.css";
 
 .nav {
+  display: none;
+}
+
+.mobile-nav {
   display: flex;
   list-style: none;
   margin-top: 20px;
   margin-bottom: 5px;
 }
 
-.nav li {
-  margin-left: 10px;
-  font-size: 26px;
-}
-
-.nav img {
+.mobile-nav img {
   width: 65px;
   margin-right: 50px;
   margin-left: 20px;
   margin-bottom: 15px;
 }
 
+.hamburger {
+  margin: 12px;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 22px;
+}
+
+.hamburger div {
+  width: 35px;
+  height: 4px;
+  background-color: black;
+  margin-bottom: 5px;
+}
+
 .selectPage {
+  display: none;
+}
+
+.mobile-category {
+  display: flex;
+  margin-top: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-selectPage {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 35px;
+  padding: 25px;
   font-size: 18px;
 }
 
@@ -34,18 +59,16 @@
 }
 
 .login {
-  position: absolute;
-  right: 2rem;
-  top: 27px;
+  display: none;
 }
 
 .movies {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
   grid-gap: 2rem;
   font-size: 1.6rem;
-  padding: 35px;
+  padding: 25px;
 }
 
 .movie {
@@ -170,9 +193,8 @@
 
 .productionCompanies {
   display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-columns: repeat(3, 1fr);
   margin: auto;
-  /* 弹出页面高度,如果不固定高度,高度会以实际内容扩展 */
   height: auto;
   max-height: 100px;
   width: auto;
@@ -215,4 +237,61 @@
   display: flex;
   justify-content: center;
   height: 400px;
+}
+
+@media only screen and (min-width: 768px) {
+  .login {
+    display: flex;
+    position: absolute;
+    right: 2rem;
+    top: 27px;
+  }
+
+  .movies {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    grid-gap: 2rem;
+    font-size: 1.6rem;
+    padding: 35px;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  .nav li {
+    margin-left: 10px;
+    font-size: 26px;
+  }
+
+  .nav img {
+    width: 65px;
+    margin-right: 50px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+
+  .selectPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    font-size: 18px;
+  }
+
+  .mobile-category {
+    display: none;
+  }
+
+  .mobile-selectPage {
+    display: none;
+  }
 }
