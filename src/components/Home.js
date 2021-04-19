@@ -161,6 +161,17 @@ export default function Home() {
           onChange={handleChange}
         />
       </div>
+
+      <div className="mobile-category">
+        <div style={{ fontSize: 15, marginRight: 20 }}>Category:</div>
+        <Select
+          options={options}
+          defaultValue="now_playing"
+          style={{ width: 125 }}
+          onChange={handleChange}
+        />
+      </div>
+
       <Modal
         title="Notice"
         visible={isModalVisible}
@@ -218,6 +229,18 @@ export default function Home() {
             </div>
           );
         })}
+      </div>
+
+      <div className="mobile-selectPage">
+        <Button type="default" onClick={handlePrev}>
+          Prev
+        </Button>
+        <div id="page">
+          {page} / {maxPage}
+        </div>
+        <Button type="default" onClick={handleNext}>
+          Next
+        </Button>
       </div>
     </>
   );
