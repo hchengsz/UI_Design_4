@@ -180,7 +180,7 @@ function MoviePage() {
             if (v.logo_path === null) {
               return (
                 <div className="company" key={v.name}>
-                  <p style={{ color: "red" }}>Image Loading Error</p>
+                  <p style={{ color: "grey" }}>No Image</p>
                   <p key={v.id} style={{ fontSize: 16 }}>
                     {v.name}
                   </p>
