@@ -217,6 +217,23 @@ function NavBar() {
         {login}
       </Menu>
 
+      <Menu className="mobile-nav" mode="horizontal" selectedKeys={key}>
+        <Link to="/">
+          <img
+            src={logo}
+            alt="logo"
+            onClick={() => {
+              changeKey(["Home"]);
+            }}
+          />
+        </Link>
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </Menu>
+
       <Route path="/" exact>
         <Home />
       </Route>
